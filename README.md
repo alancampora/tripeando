@@ -1,1 +1,3 @@
 # tripeando
+
+Organize your travel!
