@@ -1,10 +1,6 @@
 import { getAllPlaces } from './helpers';
-import { Place, ChatgptRecommendation, ChatgptPlace } from './types';
-
-function getRecommendation(rec: any) {
-	const temp: any = rec;
-	return JSON.parse(rec) as Array<ChatgptRecommendation>;
-}
+import { Place, ChatgptPlace } from './types';
+import ChatgptRecommendation from './ui/chatgtp-recommendation';
 
 export default async function Main() {
 	const data: Array<Place> = await getAllPlaces();
@@ -25,27 +21,7 @@ export default async function Main() {
 							<h3>{`${place.arrivalDate} (${place.arrivalDay})`}</h3>
 							<p>{place.description}</p>
 							<p>{place.details}</p>
-
-							<article>
-								{getRecommendation(place.chatgptRecommendation).map(
-									(days: ChatgptRecommendation, index: number) => {
-										return (
-											<div key={index}>
-												<h3>🤖 GPT </h3>
-												{days.places.map((p: ChatgptPlace, index: number) => {
-													return (
-														<div key={index}>
-															<p>{p.name}</p>
-															<p>{p.description}</p>{' '}
-															<a href={p.googleLink}>google link</a>
-														</div>
-													);
-												})}
-											</div>
-										);
-									},
-								)}
-							</article>
+							<ChatgptRecommendation data={place.chatgptRecommendation} />
 						</article>
 					);
 				})}

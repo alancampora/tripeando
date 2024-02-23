@@ -1,5 +1,6 @@
 import axios from 'axios';
 import Papa from 'papaparse';
+import { createClient } from 'pexels';
 import { Place, ChatgptRecommendation, ChatgptPlace } from '../types';
 
 export async function getDataFromGdocs(spreadSheetUrl: string): Promise<any> {
@@ -40,4 +41,20 @@ export async function getCityData(
 	);
 
 	return cityData;
+}
+
+export async function getPexelPhoto(query: string) {
+	if (query === 'madrid')
+		return 'https://images.pexels.com/photos/930595/pexels-photo-930595.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1';
+
+	if (query === 'heidelberg')
+		return 'https://images.pexels.com/photos/17151652/pexels-photo-17151652/free-photo-of-heidelberg-old-bridge-and-castle-in-heidelberg-germany.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1';
+
+	const client = createClient(process.env.PEXEL_KEY);
+
+	const photo = await client.photos.search({ query, per_page: 1 });
+
+	const landscape = photo.photos[0].src.large2x;
+
+	return landscape;
 }
