@@ -19,4 +19,5 @@ export type Place = {
 	arrivalDate: string;
 	arrivalDay: string;
 	chatgptRecommendation: Array<ChatgptRecommendation>;
+	hotel: string;
 };

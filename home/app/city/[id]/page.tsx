@@ -37,20 +37,20 @@ export default async function City({ params }: { params: { id: string } }) {
 			</header>
 			<main>
 				<article className="place">
-					<h3>{`${cityData.arrivalDate} (${cityData.arrivalDay})`}</h3>
+					<h3>{`${cityData?.arrivalDate} (${cityData?.arrivalDay})`}</h3>
 					<h3>Description</h3>
-					<TextWithLinks text={cityData.description} />
-					<TextWithLinks text={cityData.details} />
+					<TextWithLinks text={cityData?.description} />
+					<TextWithLinks text={cityData?.details} />
 				</article>
 
 				<article className="place">
 					<h3>🏨 Hotel </h3>
-					<TextWithLinks text={cityData.hotel} />
+					<TextWithLinks text={cityData?.hotel} />
 				</article>
 
 				<article className="place">
 					<h3>🤖 GPT </h3>
-					<ChatgptRecommendation data={cityData.chatgptRecommendation} />
+					<ChatgptRecommendation data={cityData!!.chatgptRecommendation} />
 				</article>
 			</main>
 		</div>

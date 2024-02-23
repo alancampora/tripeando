@@ -50,9 +50,12 @@ export async function getPexelPhoto(query: string) {
 	if (query === 'heidelberg')
 		return 'https://images.pexels.com/photos/17151652/pexels-photo-17151652/free-photo-of-heidelberg-old-bridge-and-castle-in-heidelberg-germany.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1';
 
-	const client = createClient(process.env.PEXEL_KEY);
+	const client = createClient(process.env.PEXEL_KEY || '');
 
-	const photo = await client.photos.search({ query, per_page: 1 });
+	const photo: any = await client.photos.search({
+		query,
+		per_page: 1,
+	});
 
 	const landscape = photo.photos[0].src.large2x;
 
