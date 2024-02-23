@@ -14,6 +14,7 @@ export type Place = {
 	country: string;
 	city: string;
 	description: string;
+	transfer: string;
 	details: string;
 	amountOfDays: string;
 	arrivalDate: string;

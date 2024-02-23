@@ -36,22 +36,26 @@ export default async function City({ params }: { params: { id: string } }) {
 				</div>
 			</header>
 			<main>
-				<article className="place">
+				<section className="place">
 					<h3>{`${cityData?.arrivalDate} (${cityData?.arrivalDay})`}</h3>
-					<h3>Description</h3>
+					<h3>Que lugares visitar ? </h3>
 					<TextWithLinks text={cityData?.description} />
-					<TextWithLinks text={cityData?.details} />
-				</article>
+				</section>
 
-				<article className="place">
+				<section className="place">
+					<h3>🚅 Como llegamos ? </h3>
+					<TextWithLinks text={cityData?.transfer} />
+				</section>
+
+				<section className="place">
 					<h3>🏨 Hotel </h3>
 					<TextWithLinks text={cityData?.hotel} />
-				</article>
+				</section>
 
-				<article className="place">
-					<h3>🤖 GPT </h3>
+				<section className="place">
+					<h3>🤖 Recomendaciones GPT </h3>
 					<ChatgptRecommendation data={cityData!!.chatgptRecommendation} />
-				</article>
+				</section>
 			</main>
 		</div>
 	);

@@ -1,3 +1,5 @@
+import Link from 'next/link';
+import { ubuntu400, ubuntuBold } from '@tripeando/fonts';
 import { getAllPlaces } from './helpers';
 import { Place, ChatgptPlace } from './types';
 import ChatgptRecommendation from './ui/chatgtp-recommendation';
@@ -10,8 +12,8 @@ export default async function Main() {
 	return (
 		<main>
 			<header className="header">
-				<h1>Tripeando</h1>
-				<p>El viaje de los moshos</p>
+				<h1 className={ubuntu400.className}>Tripeando</h1>
+				<h1 className={ubuntu400.className}>El viaje de los moshos</h1>
 			</header>
 			<section>
 				{data.map((place: Place, index: number) => {
@@ -20,8 +22,10 @@ export default async function Main() {
 							<h2>{`${place.country} - ${place.city}`}</h2>
 							<h3>{`${place.arrivalDate} (${place.arrivalDay})`}</h3>
 							<p>{place.description}</p>
-							<p>{place.details}</p>
-							<ChatgptRecommendation data={place.chatgptRecommendation} />
+							<p>{place.transfer}</p>
+							<Link href={`city/${place.city.toLowerCase()}`}>
+								Ver detalles
+							</Link>
 						</article>
 					);
 				})}
