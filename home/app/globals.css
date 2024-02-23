@@ -1,0 +1,17 @@
+body {
+	background: #f2d0bd;
+	margin: 0;
+}
+
+.header {
+	text-align: center;
+	padding: 1rem;
+	color: #37167e;
+	background: #ffb521;
+}
+
+.place {
+	margin: 1rem;
+	padding: 1rem;
+	background-color: white;
+}
