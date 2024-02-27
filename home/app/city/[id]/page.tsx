@@ -3,6 +3,7 @@ import {
 	getPexelPhoto,
 	getCityRecommendation,
 } from '../../helpers';
+import { ubuntu400, ubuntuBold } from '@tripeando/fonts';
 import TextWithLinks from '../../ui/text-with-links';
 import { Place, ChatgptPlace } from '../../types';
 import ChatgptRecommendation from '../../ui/chatgtp-recommendation';
@@ -17,37 +18,25 @@ export default async function City({ params }: { params: { id: string } }) {
 	const recommendation = await getCityRecommendation(params.id);
 	return (
 		<div>
-			<header style={{ height: '200px' }}>
-				<div
-					style={{
-						backgroundImage: `url(${photoSrc})`,
-						height: '100%',
-						backgroundPosition: 'center',
-						backgroundRepeat: 'no-repeat',
-						backgroundSize: 'cover',
-						position: 'relative',
-					}}
-				>
-					<div
-						className="hero-text"
-						style={{
-							textAlign: 'center',
-							position: 'absolute',
-							top: '50%',
-							left: '50%',
-							transform: 'translate(-50%, -50%)',
-							color: 'white',
-							background: '#6d6d6d8f',
-							width: 'fit-content',
-							padding: '10px',
-						}}
-					>
-						<h1>{cityData?.city}</h1>
-						<h2>{cityData?.country}</h2>
-					</div>
+			<header className="header">
+				<img
+					className="header-photo"
+					src="/assets/hand-drawn-travel-background.jpg"
+				/>
+				<div className="header-text">
+					<h1 className={ubuntu400.className}>Tripeando</h1>
+					<h1 className={ubuntu400.className}>El viaje de los moshos</h1>
 				</div>
 			</header>
+
 			<main>
+				<section className="sideBySide">
+					<img className="sideBySide-img" src={photoSrc} />
+					<div className="sideBySide-content">
+						<h1>{`${cityData.country} ${cityData.city}`}</h1>
+						<p>{recommendation.history}</p>
+					</div>
+				</section>
 				<section className="place">
 					<h3>{`${cityData?.arrivalDate} (${cityData?.arrivalDay})`}</h3>
 					<h3>Que lugares visitar ? </h3>

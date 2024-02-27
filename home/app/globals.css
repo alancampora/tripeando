@@ -49,3 +49,16 @@ body {
 	width: 100%;
 	max-height: 100%;
 }
+.sideBySide {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 1rem;
+	margin: 1rem;
+	background: white;
+}
+
+.sideBySide-img {
+	object-fit: cover;
+	width: 100%;
+	max-height: 100%;
+}
