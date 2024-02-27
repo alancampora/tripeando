@@ -28,6 +28,9 @@ export default async function City({ params }: { params: { id: string } }) {
 							left: '50%',
 							transform: 'translate(-50%, -50%)',
 							color: 'white',
+							background: '#6d6d6d8f',
+							width: 'fit-content',
+							padding: '10px',
 						}}
 					>
 						<h1>{cityData?.city}</h1>

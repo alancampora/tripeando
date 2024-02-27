@@ -19,7 +19,9 @@ export default function ChatgptRecommendation({ data }: { data: any }) {
 						{days.places.map((p: ChatgptPlace, index: number) => {
 							return (
 								<div key={index}>
-									<a href={p.googleLink}>{p.name}</a>
+									<a target="_blank" href={p.googleLink}>
+										{p.name}
+									</a>
 									<p>{p.description}</p>{' '}
 								</div>
 							);
