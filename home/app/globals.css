@@ -1,12 +1,32 @@
 body {
-	background: #f3c5b8;
+	background: #f2ded5;
 	margin: 0;
 }
 
 .header {
 	text-align: center;
-	padding: 1rem;
 	color: #405347;
+	height: 200px;
+	position: relative;
+}
+
+.header-photo {
+	object-fit: cover;
+	width: 75%;
+	max-height: 100%;
+}
+
+.header-text {
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #f2ded5;
+	background: #6ab999;
+	width: fit-content;
+	padding: 10px;
+	border-radius: 20px;
 }
 
 .place {

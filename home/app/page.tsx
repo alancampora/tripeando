@@ -16,8 +16,14 @@ export default async function Main() {
 	return (
 		<main>
 			<header className="header">
-				<h1 className={ubuntu400.className}>Tripeando</h1>
-				<h1 className={ubuntu400.className}>El viaje de los moshos</h1>
+				<img
+					className="header-photo"
+					src="/assets/hand-drawn-travel-background.jpg"
+				/>
+				<div className="header-text">
+					<h1 className={ubuntu400.className}>Tripeando</h1>
+					<h1 className={ubuntu400.className}>El viaje de los moshos</h1>
+				</div>
 			</header>
 			<section className="grid">
 				{await Promise.all(
