@@ -33,8 +33,8 @@ export default async function City({ params }: { params: { id: string } }) {
 				<section className="sideBySide">
 					<img className="sideBySide-img" src={photoSrc} />
 					<div className="sideBySide-content">
-						<h1>{`${cityData.country} ${cityData.city}`}</h1>
-						<p>{recommendation.history}</p>
+						<h1>{`${cityData?.country} ${cityData?.city}`}</h1>
+						<p>{recommendation?.history}</p>
 					</div>
 				</section>
 				<section className="place">
