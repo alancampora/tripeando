@@ -4,28 +4,18 @@ import {
 	ChatgptPlace,
 } from '../types';
 
-function getRecommendation(rec: any) {
-	const temp: any = rec;
-	return JSON.parse(rec) as Array<Recommendation>;
-}
-
 export default function ChatgptRecommendation({ data }: { data: any }) {
 	return (
 		<article>
-			{getRecommendation(data).map((days: Recommendation, index: number) => {
+			{data.map((place: ChatgptPlace, index: number) => {
 				return (
 					<div key={index}>
-						<h3>{days.dayKey}</h3>
-						{days.places.map((p: ChatgptPlace, index: number) => {
-							return (
-								<div key={index}>
-									<a target="_blank" href={p.googleLink}>
-										{p.name}
-									</a>
-									<p>{p.description}</p>{' '}
-								</div>
-							);
-						})}
+						<div key={index}>
+							<a target="_blank" href={place.googleLink}>
+								{place.name}
+							</a>
+							<p>{place.description}</p>{' '}
+						</div>
 					</div>
 				);
 			})}

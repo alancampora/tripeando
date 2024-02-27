@@ -3,6 +3,7 @@ import Papa from 'papaparse';
 import { createClient } from 'pexels';
 import { Place, ChatgptRecommendation, ChatgptPlace } from '../types';
 import { getCityPhotoSize } from './photo-cache';
+import { getCityRecommendationInfo } from './city-cache';
 
 export async function getDataFromGdocs(spreadSheetUrl: string): Promise<any> {
 	console.log({ spreadSheetUrl });
@@ -42,6 +43,10 @@ export async function getCityData(
 	);
 
 	return cityData;
+}
+
+export async function getCityRecommendation(key: string) {
+	return await getCityRecommendationInfo(key);
 }
 
 export async function getPexelPhoto(query: string, size: string) {

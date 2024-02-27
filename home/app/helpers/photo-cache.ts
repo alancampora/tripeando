@@ -9,7 +9,7 @@ interface Src {
 	tiny: string;
 }
 
-interface CityInfo {
+interface CityPhotoInfo {
 	id: number;
 	width: number;
 	height: number;
@@ -23,12 +23,12 @@ interface CityInfo {
 	alt: string;
 }
 
-interface CityData {
-	[key: string]: CityInfo;
+interface CityPhotoData {
+	[key: string]: CityPhotoInfo;
 }
 
-export function getCityPhotoInfo(key: string): CityInfo | null {
-	return cityData[key as keyof CityData];
+export function getCityPhotoInfo(key: string): CityPhotoInfo | null {
+	return cityData[key as keyof CityPhotoData];
 }
 
 export function getCityPhotoSize(
@@ -43,7 +43,7 @@ export function getCityPhotoSize(
 	return result;
 }
 
-const cityData: CityData = {
+const cityData: CityPhotoData = {
 	madrid: {
 		id: 670261,
 		width: 3938,

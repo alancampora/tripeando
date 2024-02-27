@@ -1,11 +1,20 @@
-import { getCityData, getPexelPhoto } from '../../helpers';
+import {
+	getCityData,
+	getPexelPhoto,
+	getCityRecommendation,
+} from '../../helpers';
 import TextWithLinks from '../../ui/text-with-links';
 import { Place, ChatgptPlace } from '../../types';
 import ChatgptRecommendation from '../../ui/chatgtp-recommendation';
 
+async function getCityRec(key: string) {
+	return await getCityRecommendation(key);
+}
+
 export default async function City({ params }: { params: { id: string } }) {
 	const cityData: Place | undefined = await getCityData(params.id);
 	const photoSrc = await getPexelPhoto(params.id, 'original');
+	const recommendation = await getCityRecommendation(params.id);
 	return (
 		<div>
 			<header style={{ height: '200px' }}>
@@ -57,7 +66,7 @@ export default async function City({ params }: { params: { id: string } }) {
 
 				<section className="place">
 					<h3>🤖 Recomendaciones GPT </h3>
-					<ChatgptRecommendation data={cityData!!.chatgptRecommendation} />
+					<ChatgptRecommendation data={recommendation?.places} />
 				</section>
 			</main>
 		</div>
