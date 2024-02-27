@@ -5,7 +5,7 @@ import ChatgptRecommendation from '../../ui/chatgtp-recommendation';
 
 export default async function City({ params }: { params: { id: string } }) {
 	const cityData: Place | undefined = await getCityData(params.id);
-	const photoSrc = await getPexelPhoto(params.id);
+	const photoSrc = await getPexelPhoto(params.id, 'original');
 	return (
 		<div>
 			<header style={{ height: '200px' }}>
