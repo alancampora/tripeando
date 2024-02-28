@@ -10,14 +10,12 @@ body {
 		),
 		url('/assets/famous-places.jpg');
 	background-size: cover;
-	margin: 1rem;
 }
 
 .header {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 1rem;
-	margin: 1rem;
 	align-items: center;
 }
 
@@ -31,6 +29,13 @@ body {
 }
 
 @media (max-width: 780px) {
+	.header {
+		grid-template-columns: 1fr 0fr;
+	}
+
+	.header-logo {
+		justify-self: center;
+	}
 	.header-img {
 		display: none;
 	}
