@@ -558,4 +558,61 @@ const cityData: CityRecommendationData = {
 			},
 		],
 	},
+
+	frankfurt: {
+		name: 'Frankfurt',
+		history:
+			'Frankfurt es una ciudad importante en Alemania, conocida por ser un centro financiero y comercial clave en Europa. También es conocida por su impresionante horizonte de rascacielos y su rica historia como sede de la Feria de Frankfurt y el Banco Central Europeo.',
+		places: [
+			{
+				name: 'Römerberg',
+				description:
+					'Römerberg es una plaza histórica en el corazón de Frankfurt, conocida por su arquitectura medieval y renacentista. Es el centro neurálgico de la ciudad y alberga edificios emblemáticos como el Römer, el ayuntamiento de Frankfurt.',
+				googleLink:
+					'https://www.google.com/maps/search/?api=1&query=Römerberg+Frankfurt',
+			},
+			{
+				name: 'Museo Städel',
+				description:
+					'El Museo Städel es uno de los principales museos de arte de Frankfurt, con una impresionante colección que abarca desde el arte medieval hasta el arte contemporáneo. Incluye obras maestras de artistas como Rembrandt, Botticelli y Picasso.',
+				googleLink:
+					'https://www.google.com/maps/search/?api=1&query=Museo+Städel+Frankfurt',
+			},
+			{
+				name: 'Main Tower',
+				description:
+					'Main Tower es uno de los rascacielos más emblemáticos de Frankfurt y ofrece vistas panorámicas de la ciudad desde su plataforma de observación. Es un lugar popular para disfrutar de vistas impresionantes del horizonte de la ciudad.',
+				googleLink:
+					'https://www.google.com/maps/search/?api=1&query=Main+Tower+Frankfurt',
+			},
+			{
+				name: 'Paulskirche',
+				description:
+					'La Paulskirche es una iglesia histórica en Frankfurt, conocida por ser el lugar de la primera asamblea nacional alemana en 1848, un hito importante en la historia democrática de Alemania. Hoy en día, es un símbolo de libertad y democracia.',
+				googleLink:
+					'https://www.google.com/maps/search/?api=1&query=Paulskirche+Frankfurt',
+			},
+			{
+				name: 'Palmengarten',
+				description:
+					'El Palmengarten es un hermoso jardín botánico en Frankfurt, con una gran variedad de plantas y flores de todo el mundo. Es un lugar encantador para pasear, relajarse y disfrutar de la naturaleza en el corazón de la ciudad.',
+				googleLink:
+					'https://www.google.com/maps/search/?api=1&query=Palmengarten+Frankfurt',
+			},
+			{
+				name: 'Museo de Arte Moderno',
+				description:
+					'El Museo de Arte Moderno de Frankfurt es uno de los museos de arte contemporáneo más importantes de Alemania, con una impresionante colección de arte moderno y contemporáneo de todo el mundo. Es un lugar imperdible para los amantes del arte.',
+				googleLink:
+					'https://www.google.com/maps/search/?api=1&query=Museo+de+Arte+Moderno+Frankfurt',
+			},
+			{
+				name: 'Zeil',
+				description:
+					'La Zeil es una de las calles comerciales más importantes de Frankfurt, conocida por sus tiendas, restaurantes y grandes almacenes. Es un lugar popular para ir de compras y disfrutar de la vida urbana de la ciudad.',
+				googleLink:
+					'https://www.google.com/maps/search/?api=1&query=Zeil+Frankfurt',
+			},
+		],
+	},
 };

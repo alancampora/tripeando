@@ -14,7 +14,7 @@ async function getCityRec(key: string) {
 
 export default async function City({ params }: { params: { id: string } }) {
 	const cityData: Place | undefined = await getCityData(params.id);
-	const photoSrc = await getPexelPhoto(params.id, 'original');
+	const photoSrc = await getPexelPhoto(params.id, 'portrait');
 	const recommendation = await getCityRecommendation(params.id);
 	return (
 		<div>
