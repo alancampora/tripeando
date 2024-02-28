@@ -19,13 +19,10 @@ export default async function City({ params }: { params: { id: string } }) {
 	return (
 		<div>
 			<header className="header">
-				<img
-					className="header-photo"
-					src="/assets/hand-drawn-travel-background.jpg"
-				/>
+				<img className="header-photo" src="/assets/moshos-header.png" />
 				<div className="header-text">
-					<h1 className={ubuntu400.className}>Tripeando</h1>
-					<h1 className={ubuntu400.className}>El viaje de los moshos</h1>
+					<h1 className="header-text-main">TRIPEANDO</h1>
+					<p className="header-text-sub">con los moshos por el mundo!</p>
 				</div>
 			</header>
 
