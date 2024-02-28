@@ -4,7 +4,7 @@ import {
 	ChatgptPlace,
 } from '../types';
 
-export default function ChatgptRecommendation({ data }: { data: any }) {
+export default function ChatgptRecommendation({ data = [] }: { data: any }) {
 	return (
 		<article>
 			{data.map((place: ChatgptPlace, index: number) => {
