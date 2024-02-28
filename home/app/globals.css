@@ -34,6 +34,13 @@ body {
 	.header-img {
 		display: none;
 	}
+	.header-title {
+		font-size: 2em !important;
+	}
+
+	.header-subtitle {
+		font-size: 1em !important;
+	}
 }
 
 .header-img-photo {
