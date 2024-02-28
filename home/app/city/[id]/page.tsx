@@ -18,11 +18,15 @@ export default async function City({ params }: { params: { id: string } }) {
 	const recommendation = await getCityRecommendation(params.id);
 	return (
 		<div>
-			<header className="header">
-				<img className="header-photo" src="/assets/moshos-header.png" />
-				<div className="header-text">
-					<h1 className="header-text-main">TRIPEANDO</h1>
-					<p className="header-text-sub">con los moshos por el mundo!</p>
+			<header className="header-bc">
+				<div className="header">
+					<div className="header-logo">
+						<h1 className="header-title">Tripeando</h1>
+						<p className="header-subtitle">con los moshos!</p>
+					</div>
+					<div className="header-img">
+						<img className="header-img-photo" src="/assets/moshos-foto.jpeg" />
+					</div>
 				</div>
 			</header>
 
