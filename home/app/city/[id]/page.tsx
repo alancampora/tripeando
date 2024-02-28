@@ -58,6 +58,13 @@ export default async function City({ params }: { params: { id: string } }) {
 					<h3>🤖 Recomendaciones GPT </h3>
 					<ChatgptRecommendation data={recommendation?.places} />
 				</section>
+
+				{cityData.review && (
+					<section className="place">
+						<h3>❤️ Nuestra Review</h3>
+						<TextWithLinks text={cityData.review} />
+					</section>
+				)}
 			</main>
 		</div>
 	);
