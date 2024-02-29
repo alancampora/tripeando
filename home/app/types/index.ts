@@ -19,6 +19,8 @@ export type Place = {
 	amountOfDays: string;
 	arrivalDate: string;
 	arrivalDay: string;
+	departureDate: string;
+	departureDay: string;
 	chatgptRecommendation: Array<ChatgptRecommendation>;
 	hotel: string;
 	review: string;

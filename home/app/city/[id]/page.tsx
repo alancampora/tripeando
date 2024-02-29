@@ -59,10 +59,10 @@ export default async function City({ params }: { params: { id: string } }) {
 					<ChatgptRecommendation data={recommendation?.places} />
 				</section>
 
-				{cityData.review && (
+				{cityData?.review && (
 					<section className="place">
 						<h3>❤️ Nuestra Review</h3>
-						<TextWithLinks text={cityData.review} />
+						<ChatgptRecommendation data={cityData.review} />
 					</section>
 				)}
 			</main>
