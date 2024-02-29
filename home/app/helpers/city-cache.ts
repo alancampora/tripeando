@@ -4,10 +4,16 @@ interface PlaceRecommendation {
 	googleLink: string;
 }
 
+interface Location {
+	latitude: number;
+	longitude: number;
+}
+
 interface CityRecommendationInfo {
 	name: string;
 	history: string;
 	places: PlaceRecommendation[];
+	location: Location;
 }
 
 interface CityRecommendationData {
@@ -23,6 +29,10 @@ export function getCityRecommendationInfo(
 const cityData: CityRecommendationData = {
 	heidelberg: {
 		name: 'Heidelberg',
+		location: {
+			latitude: 49.3988,
+			longitude: 8.6724,
+		},
 		history:
 			'Heidelberg es una ciudad histórica ubicada en el valle del río Neckar en el suroeste de Alemania. Es conocida por su famoso castillo y su encantador casco antiguo.',
 		places: [
@@ -86,6 +96,10 @@ const cityData: CityRecommendationData = {
 	},
 	munich: {
 		name: 'Munich',
+		location: {
+			latitude: 48.1351,
+			longitude: 11.582,
+		},
 		history:
 			'Munich, la capital de Baviera en el sur de Alemania, es conocida por su rica historia, su arquitectura impresionante y su animada cultura.',
 		places: [
@@ -161,11 +175,14 @@ const cityData: CityRecommendationData = {
 			},
 		],
 	},
-
 	innsbruck: {
 		name: 'Innsbruck',
 		history:
 			'Innsbruck es la capital del estado de Tirol en Austria, ubicada en el valle del río Inn. Es conocida por su impresionante paisaje alpino, su rica historia y su arquitectura barroca.',
+		location: {
+			latitude: 47.2692,
+			longitude: 11.4041,
+		},
 		places: [
 			{
 				name: 'Tejado de Oro',
@@ -218,11 +235,14 @@ const cityData: CityRecommendationData = {
 			},
 		],
 	},
-
 	verona: {
 		name: 'Verona',
 		history:
 			'Verona es una hermosa ciudad ubicada en el noreste de Italia, famosa por su rica historia, su arquitectura medieval y su asociación con la obra de Shakespeare, Romeo y Julieta.',
+		location: {
+			latitude: 45.4384,
+			longitude: 10.9916,
+		},
 		places: [
 			{
 				name: 'Arena de Verona',
@@ -279,6 +299,10 @@ const cityData: CityRecommendationData = {
 		name: 'Venecia',
 		history:
 			'Venecia es una ciudad única en el noreste de Italia, famosa por sus canales, su arquitectura renacentista y su rica historia como una importante potencia comercial durante la Edad Media y el Renacimiento.',
+		location: {
+			latitude: 45.4408,
+			longitude: 12.3155,
+		},
 		places: [
 			{
 				name: 'Piazza San Marco',
@@ -331,11 +355,14 @@ const cityData: CityRecommendationData = {
 			},
 		],
 	},
-
 	firenze: {
 		name: 'Florencia',
 		history:
 			'Florencia es una ciudad ubicada en el corazón de la región de la Toscana en Italia, famosa por su arte renacentista, su arquitectura histórica y su rica historia como centro cultural y económico durante el Renacimiento.',
+		location: {
+			latitude: 43.7696,
+			longitude: 11.2558,
+		},
 		places: [
 			{
 				name: 'Duomo de Florencia',
@@ -388,11 +415,14 @@ const cityData: CityRecommendationData = {
 			},
 		],
 	},
-
 	roma: {
 		name: 'Roma',
 		history:
 			'Roma es la capital de Italia y una de las ciudades más antiguas y fascinantes del mundo. Con una historia que abarca más de dos milenios, Roma es conocida por su impresionante patrimonio histórico y arquitectónico, que incluye monumentos icónicos como el Coliseo y el Vaticano.',
+		location: {
+			latitude: 41.9028,
+			longitude: 12.4964,
+		},
 		places: [
 			{
 				name: 'Coliseo',
@@ -445,11 +475,14 @@ const cityData: CityRecommendationData = {
 			},
 		],
 	},
-
 	barcelona: {
 		name: 'Barcelona',
 		history:
 			'Barcelona es una vibrante ciudad ubicada en la costa mediterránea de España, famosa por su arquitectura modernista, su rica cultura y su animada vida nocturna. Es la capital de la región de Cataluña y uno de los destinos turísticos más populares de Europa.',
+		location: {
+			latitude: 41.3851,
+			longitude: 2.1734,
+		},
 		places: [
 			{
 				name: 'Sagrada Familia',
@@ -506,6 +539,10 @@ const cityData: CityRecommendationData = {
 		name: 'Madrid',
 		history:
 			'Madrid es la capital de España y una de las ciudades más grandes y animadas de Europa. Con una rica historia, una vibrante cultura y una emocionante vida nocturna, Madrid atrae a millones de visitantes cada año.',
+		location: {
+			latitude: 40.4168,
+			longitude: -3.7038,
+		},
 		places: [
 			{
 				name: 'Museo del Prado',
@@ -558,11 +595,14 @@ const cityData: CityRecommendationData = {
 			},
 		],
 	},
-
 	frankfurt: {
 		name: 'Frankfurt',
 		history:
 			'Frankfurt es una ciudad importante en Alemania, conocida por ser un centro financiero y comercial clave en Europa. También es conocida por su impresionante horizonte de rascacielos y su rica historia como sede de la Feria de Frankfurt y el Banco Central Europeo.',
+		location: {
+			latitude: 50.1109,
+			longitude: 8.6821,
+		},
 		places: [
 			{
 				name: 'Römerberg',
